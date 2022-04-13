@@ -1,0 +1,53 @@
+$primary: #3f51b5;
+
+.faceting {
+  position: fixed;
+}
+
+.product-listing-page {
+  padding-top: 10px;
+
+  .facet-sorting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.facet-category {
+  margin: 10px 0;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+
+  .facet {
+    padding: 10px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid lightgray;
+    }
+
+    &:last-of-type {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.active {
+      background-color: #b3bbe7;
+    }
+
+    &.facet-header {
+      background-color: $primary;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      color: white;
+    }
+  }
+}
+
+.example-form-field {
+  width: 200px;
+}

@@ -1,0 +1,30 @@
+.product {
+  border: 1px solid lightgrey;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 1px 2px 0 lightgray;
+
+  .product-image {
+    width: 100%;
+  }
+
+  .product-header {
+    .product-title {
+      font-weight: bold;
+      display: block;
+      height: 40px;
+    }
+  }
+
+  .product-content {
+    height: 200px;
+  }
+
+  .product-actions {
+    button {
+      width: calc(50% - 10px);
+      margin: 0 5px;
+    }
+  }
+}

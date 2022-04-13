@@ -1,0 +1,67 @@
+<div class="container product-listing-page">
+  <div class="row">
+    <div class="col-lg-2">
+      <span>SORT</span>
+      <select
+        name="sortOptions"
+        id="sortOptions"
+        (change)="onSortSelected($event.target.value)"
+      >
+        <option *ngFor="let sort of sortOptions" [value]="sort.value">
+          {{ sort.name }}
+        </option>
+      </select>
+      <ul class="facet-category">
+        <li class="facet facet-header">Brands</li>
+        <li
+          class="facet"
+          *ngFor="let brand of productBrands"
+          [class.active]="brand.id === this.shopParams.brandId"
+          [value]="brand.id"
+          (click)="onBrandSelected(brand.id)"
+        >
+          {{ brand.name }}
+        </li>
+      </ul>
+      <ul class="facet-category">
+        <li class="facet facet-header">Types</li>
+        <li
+          class="facet"
+          *ngFor="let type of productTypes"
+          [class.active]="type.id === this.shopParams.typeId"
+          [value]="type.id"
+          (click)="onTypeSelected(type.id)"
+        >
+          {{ type.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-10">
+      <div class="facet-sorting">
+        <div>
+          <span>Showing 10 of 15</span>
+        </div>
+        <div>
+          <mat-form-field class="example-form-field" appearance="fill">
+            <input matInput type="text" />
+          </mat-form-field>
+          <button mat-flat-button color="accent">Search</button>
+          <button mat-flat-button color="primary">Reset</button>
+        </div>
+      </div>
+
+      <div class="row product-list">
+        <div class="col-lg-3" *ngFor="let product of products">
+          <app-product-item [product]="product"></app-product-item>
+        </div>
+      </div>
+      <mat-paginator
+        [length]="this.totalCount"
+        [pageSizeOptions]="[8, 12, 24]"
+        aria-label="Select page"
+        (page)="onPageChanged($event)"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+</div>
