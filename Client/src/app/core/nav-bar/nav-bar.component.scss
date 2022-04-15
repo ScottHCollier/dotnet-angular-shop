@@ -33,6 +33,10 @@
     .logo {
       width: 25px;
       height: auto;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
@@ -42,5 +46,11 @@
 
   .nav-centre {
     margin: 0 auto;
+
+    a {
+      &.active {
+        color: violet;
+      }
+    }
   }
 }

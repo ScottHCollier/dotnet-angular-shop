@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row" *ngIf="product">
+    <div class="col-lg-6">
+      <img src="{{ product.pictureUrl }}" alt="{{ product.name }}" class="" />
+    </div>
+    <div class="col-lg-6">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.price | currency }}</p>
+      <div class="product-actions">
+        <mat-icon>remove_circle_outline</mat-icon>
+        <span>2</span>
+        <mat-icon>add_circle_outline</mat-icon>
+        <button mat-flat-button color="primary">Add to cart</button>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <h4>Description</h4>
+      <p>{{ product.description }}</p>
+    </div>
+  </div>
+</div>

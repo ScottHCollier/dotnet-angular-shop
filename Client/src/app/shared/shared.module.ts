@@ -7,10 +7,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatSelectModule } from '@angular/material/select';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { PaginationHeaderComponent } from './components/pagination-header/pagination-header.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [PaginationHeaderComponent],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -20,6 +22,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatCardModule,
     MatInputModule,
     MatBadgeModule,
+    MatSelectModule,
     MatPaginatorModule,
   ],
   exports: [
@@ -30,7 +33,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatCardModule,
     MatInputModule,
     MatBadgeModule,
+    MatSelectModule,
     MatPaginatorModule,
+    PaginationHeaderComponent,
   ],
 })
 export class SharedModule {}

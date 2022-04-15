@@ -5,11 +5,15 @@
     alt="{{ product.name }}"
   />
   <div class="product-header">
-    <span class="product-title">{{ product.name }}</span>
+    <a class="product-title" routerLink="/shop/{{ product.id }}">{{
+      product.name
+    }}</a>
     <span class="product-subtitle">{{ product.price | currency: "GBP" }}</span>
   </div>
   <div class="product-actions">
     <button mat-flat-button color="primary">ADD</button>
-    <button mat-flat-button color="primary">VIEW</button>
+    <button mat-flat-button color="primary" routerLink="/shop/{{ product.id }}">
+      VIEW
+    </button>
   </div>
 </div>

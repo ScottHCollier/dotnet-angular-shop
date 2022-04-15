@@ -1,0 +1,13 @@
+.product-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  span {
+    margin: 0 5px;
+  }
+
+  button {
+    margin-left: 20px;
+  }
+}

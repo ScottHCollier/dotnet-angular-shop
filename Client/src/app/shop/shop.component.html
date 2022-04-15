@@ -1,16 +1,20 @@
 <div class="container product-listing-page">
   <div class="row">
     <div class="col-lg-2">
-      <span>SORT</span>
-      <select
-        name="sortOptions"
-        id="sortOptions"
-        (change)="onSortSelected($event.target.value)"
-      >
-        <option *ngFor="let sort of sortOptions" [value]="sort.value">
-          {{ sort.name }}
-        </option>
-      </select>
+      <mat-form-field appearance="fill" class="sort-options">
+        <mat-label>Sort</mat-label>
+        <mat-select
+          name="sortOptions"
+          id="sortOptions"
+          [(value)]="shopParams.sort"
+          (valueChange)="onSortSelected()"
+        >
+          <mat-option *ngFor="let sort of sortOptions" [value]="sort.value">
+            {{ sort.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
       <ul class="facet-category">
         <li class="facet facet-header">Brands</li>
         <li
@@ -38,15 +42,28 @@
     </div>
     <div class="col-lg-10">
       <div class="facet-sorting">
+        <app-pagination-header
+          [totalCount]="totalCount"
+          [pageSize]="this.shopParams.pageSize"
+          [pageNumber]="this.shopParams.pageNumber"
+        ></app-pagination-header>
         <div>
-          <span>Showing 10 of 15</span>
-        </div>
-        <div>
-          <mat-form-field class="example-form-field" appearance="fill">
-            <input matInput type="text" />
+          <mat-form-field>
+            <input
+              (keyup.enter)="onSearch()"
+              type="text"
+              matInput
+              placeholder="Search"
+              #search
+            />
+            <button matSuffix mat-button (click)="onSearch()">
+              <mat-icon>search</mat-icon>
+            </button>
           </mat-form-field>
-          <button mat-flat-button color="accent">Search</button>
-          <button mat-flat-button color="primary">Reset</button>
+
+          <button mat-flat-button color="primary" (click)="onReset()">
+            Reset
+          </button>
         </div>
       </div>
 
@@ -55,11 +72,13 @@
           <app-product-item [product]="product"></app-product-item>
         </div>
       </div>
+
       <mat-paginator
         [length]="this.totalCount"
         [pageSizeOptions]="[8, 12, 24]"
         aria-label="Select page"
         (page)="onPageChanged($event)"
+        *ngIf="totalCount && totalCount > 0"
       >
       </mat-paginator>
     </div>
