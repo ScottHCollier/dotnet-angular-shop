@@ -1,0 +1,7 @@
+<div class="basket-totals">Order Summary</div>
+<p>Shipping costs will be added depending on choices made during checkout</p>
+<ul *ngIf="basketTotals$ | async as totals">
+  <li>Subtotal: {{ totals.subtotal | currency: "GBP" }}</li>
+  <li>Shipping and handling: {{ totals.shipping | currency: "GBP" }}</li>
+  <li>Total: {{ totals.total | currency: "GBP" }}</li>
+</ul>

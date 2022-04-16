@@ -11,7 +11,9 @@
     <span class="product-subtitle">{{ product.price | currency: "GBP" }}</span>
   </div>
   <div class="product-actions">
-    <button mat-flat-button color="primary">ADD</button>
+    <button mat-flat-button color="primary" (click)="addItemToBasket()">
+      ADD
+    </button>
     <button mat-flat-button color="primary" routerLink="/shop/{{ product.id }}">
       VIEW
     </button>

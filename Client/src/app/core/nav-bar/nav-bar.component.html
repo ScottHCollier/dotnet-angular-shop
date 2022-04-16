@@ -69,7 +69,19 @@
           </div>
         </div>
         <div class="nav-right">
-          <mat-icon matBadge="3" matBadgeColor="warn">shopping_cart</mat-icon>
+          <mat-icon
+            *ngIf="basketCount$ | async as basket; else emptyBasket"
+            matBadge="{{ basket.count }}"
+            matBadgeColor="warn"
+            routerLink="/basket"
+            class="basket-icon"
+            >shopping_cart</mat-icon
+          >
+          <ng-template #emptyBasket>
+            <mat-icon routerLink="/basket" class="basket-icon"
+              >shopping_cart</mat-icon
+            >
+          </ng-template>
           <button
             mat-icon-button
             [matMenuTriggerFor]="menu"

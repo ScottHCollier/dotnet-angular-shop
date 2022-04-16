@@ -42,6 +42,12 @@
 
   .nav-right {
     justify-content: flex-end;
+
+    .basket-icon {
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 
   .nav-centre {

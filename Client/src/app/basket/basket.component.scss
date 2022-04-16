@@ -1,0 +1,21 @@
+.basket {
+  .product-headers {
+    padding: 20px 0;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .products {
+    padding: 20px 0;
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .product-details {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

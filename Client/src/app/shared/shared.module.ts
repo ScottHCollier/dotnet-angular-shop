@@ -11,9 +11,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { PaginationHeaderComponent } from './components/pagination-header/pagination-header.component';
 import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
+import { OrderTotalsComponent } from './components/order-totals/order-totals.component';
 
 @NgModule({
-  declarations: [PaginationHeaderComponent, ImageCarouselComponent],
+  declarations: [
+    PaginationHeaderComponent,
+    ImageCarouselComponent,
+    OrderTotalsComponent,
+  ],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -38,6 +43,7 @@ import { ImageCarouselComponent } from './components/image-carousel/image-carous
     MatPaginatorModule,
     PaginationHeaderComponent,
     ImageCarouselComponent,
+    OrderTotalsComponent,
   ],
 })
 export class SharedModule {}
