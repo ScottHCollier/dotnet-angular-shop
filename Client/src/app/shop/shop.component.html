@@ -1,44 +1,46 @@
 <div class="container product-listing-page">
   <div class="row">
     <div class="col-lg-2">
-      <mat-form-field appearance="fill" class="sort-options">
-        <mat-label>Sort</mat-label>
-        <mat-select
-          name="sortOptions"
-          id="sortOptions"
-          [(value)]="shopParams.sort"
-          (valueChange)="onSortSelected()"
-        >
-          <mat-option *ngFor="let sort of sortOptions" [value]="sort.value">
-            {{ sort.name }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+      <ng-container *ngIf="productTypes && productBrands">
+        <mat-form-field appearance="fill" class="sort-options">
+          <mat-label>Sort</mat-label>
+          <mat-select
+            name="sortOptions"
+            id="sortOptions"
+            [(value)]="shopParams.sort"
+            (valueChange)="onSortSelected()"
+          >
+            <mat-option *ngFor="let sort of sortOptions" [value]="sort.value">
+              {{ sort.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
 
-      <ul class="facet-category">
-        <li class="facet facet-header">Brands</li>
-        <li
-          class="facet"
-          *ngFor="let brand of productBrands"
-          [class.active]="brand.id === this.shopParams.brandId"
-          [value]="brand.id"
-          (click)="onBrandSelected(brand.id)"
-        >
-          {{ brand.name }}
-        </li>
-      </ul>
-      <ul class="facet-category">
-        <li class="facet facet-header">Types</li>
-        <li
-          class="facet"
-          *ngFor="let type of productTypes"
-          [class.active]="type.id === this.shopParams.typeId"
-          [value]="type.id"
-          (click)="onTypeSelected(type.id)"
-        >
-          {{ type.name }}
-        </li>
-      </ul>
+        <ul class="facet-category">
+          <li class="facet facet-header">Brands</li>
+          <li
+            class="facet"
+            *ngFor="let brand of productBrands"
+            [class.active]="brand.id === this.shopParams.brandId"
+            [value]="brand.id"
+            (click)="onBrandSelected(brand.id)"
+          >
+            {{ brand.name }}
+          </li>
+        </ul>
+        <ul class="facet-category">
+          <li class="facet facet-header">Types</li>
+          <li
+            class="facet"
+            *ngFor="let type of productTypes"
+            [class.active]="type.id === this.shopParams.typeId"
+            [value]="type.id"
+            (click)="onTypeSelected(type.id)"
+          >
+            {{ type.name }}
+          </li>
+        </ul>
+      </ng-container>
     </div>
     <div class="col-lg-10">
       <div class="facet-sorting">
@@ -47,7 +49,7 @@
           [pageSize]="this.shopParams.pageSize"
           [pageNumber]="this.shopParams.pageNumber"
         ></app-pagination-header>
-        <div>
+        <div *ngIf="productTypes && productBrands">
           <mat-form-field>
             <input
               (keyup.enter)="onSearch()"

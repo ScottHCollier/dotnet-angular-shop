@@ -10,9 +10,10 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatSelectModule } from '@angular/material/select';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { PaginationHeaderComponent } from './components/pagination-header/pagination-header.component';
+import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
 
 @NgModule({
-  declarations: [PaginationHeaderComponent],
+  declarations: [PaginationHeaderComponent, ImageCarouselComponent],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -36,6 +37,7 @@ import { PaginationHeaderComponent } from './components/pagination-header/pagina
     MatSelectModule,
     MatPaginatorModule,
     PaginationHeaderComponent,
+    ImageCarouselComponent,
   ],
 })
 export class SharedModule {}

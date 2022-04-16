@@ -1,0 +1,11 @@
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .breadcrumb-item {
+    &:not(:first-of-type) {
+      margin-left: 5px;
+    }
+  }
+}

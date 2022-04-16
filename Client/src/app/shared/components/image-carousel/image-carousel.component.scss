@@ -1,0 +1,92 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    &.fade {
+      animation-name: fade;
+      animation-duration: 2000ms;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .controls {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .button {
+      &:hover {
+        cursor: pointer;
+      }
+
+      .mat-icon {
+        color: #fff;
+        opacity: 0.5;
+        transition: opacity 600ms ease;
+        font-size: 50px;
+        height: 50px;
+        width: 50px;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 15px;
+
+    .bullet {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: inline-block;
+      transition: opacity 600ms ease;
+      opacity: 0.5;
+
+      &.active {
+        opacity: 1;
+      }
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

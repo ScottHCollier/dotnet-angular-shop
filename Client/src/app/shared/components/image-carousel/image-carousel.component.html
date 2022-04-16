@@ -1,0 +1,32 @@
+<div
+  *ngIf="images && images.length > 0"
+  class="carousel"
+  [style.height]="height"
+>
+  <img
+    *ngFor="let image of images; let i = index"
+    [src]="image.imageSrc"
+    [alt]="image.imageAlt"
+    [ngClass]="{ active: selectedIndex === i }"
+    class="fade"
+  />
+
+  <div *ngIf="controls" class="controls">
+    <div class="prev button">
+      <mat-icon (click)="previousImage()">keyboard_arrow_left</mat-icon>
+    </div>
+    <div class="next button" (click)="nextImage()">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </div>
+  </div>
+
+  <div *ngIf="pagination" class="pagination">
+    <span
+      *ngFor="let bullet of images; let i = index"
+      class="bullet"
+      [ngClass]="{ active: selectedIndex === i }"
+      (click)="selectImage(i)"
+    >
+    </span>
+  </div>
+</div>
