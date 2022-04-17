@@ -21,6 +21,7 @@ namespace Infrastructure.Identity
                         Street = "10 Street",
                         City = "Cheltenham",
                         PostCode = "GL27 7SC",
+                        Country = "UK"
                     }
                 };
 
