@@ -69,6 +69,40 @@
           </div>
         </div>
         <div class="nav-right">
+          <ng-container *ngIf="(currentUser$ | async) === null">
+            <a mat-button routerLink="/account/login" routerLinkActive="active"
+              >Login</a
+            >
+            <a
+              mat-button
+              routerLink="/account/register"
+              routerLinkActive="active"
+              >Register</a
+            >
+          </ng-container>
+          <ng-container *ngIf="currentUser$ | async as user">
+            <button
+              mat-icon-button
+              [matMenuTriggerFor]="menu"
+              aria-label="Example button with a menu"
+            >
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <a mat-menu-item href="#">
+                <span>Welcome {{ user.displayName }}!</span>
+              </a>
+              <a routerLink="/basket" mat-menu-item>
+                <span>View Basket</span>
+              </a>
+              <a routerLink="/orders" mat-menu-item>
+                <span>View Orders</span>
+              </a>
+              <a (click)="logout()" mat-menu-item>
+                <span>Logout</span>
+              </a>
+            </mat-menu>
+          </ng-container>
           <mat-icon
             *ngIf="basketCount$ | async as basket; else emptyBasket"
             matBadge="{{ basket.count }}"
@@ -82,28 +116,6 @@
               >shopping_cart</mat-icon
             >
           </ng-template>
-          <button
-            mat-icon-button
-            [matMenuTriggerFor]="menu"
-            aria-label="Example button with a menu"
-          >
-            <mat-icon>more_vert</mat-icon>
-          </button>
-
-          <mat-menu #menu="matMenu">
-            <a mat-menu-item href="#">
-              <span>Menu Item 1</span>
-            </a>
-            <a mat-menu-item href="#">
-              <span>Menu Item 2</span>
-            </a>
-            <a mat-menu-item href="#">
-              <span>Menu Item 3</span>
-            </a>
-            <a mat-menu-item href="#">
-              <span>Menu Item 4</span>
-            </a>
-          </mat-menu>
         </div>
       </div>
     </mat-toolbar>
