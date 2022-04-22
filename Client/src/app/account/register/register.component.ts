@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
   AsyncValidatorFn,
-  FormControl,
+  FormBuilder,
   FormGroup,
   Validators,
 } from '@angular/forms';
@@ -15,38 +15,32 @@ import { AccountService } from '../account.service';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  loading: boolean = false;
   registerForm: FormGroup;
-  displayNameControl: FormControl;
-  emailControl: FormControl;
-  passwordControl: FormControl;
-  confirmPasswordControl: FormControl;
   errors: string[];
 
-  constructor(private accountService: AccountService, private router: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private accountService: AccountService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.createRegisterForm();
   }
 
   createRegisterForm() {
-    this.displayNameControl = new FormControl('', [Validators.required]);
-
-    this.emailControl = new FormControl(
-      '',
-      [Validators.required, Validators.email],
-      [this.validateEmailNotTaken()]
-    );
-
-    this.passwordControl = new FormControl('', [Validators.required]);
-
-    this.confirmPasswordControl = new FormControl('', [Validators.required]);
-
-    this.registerForm = new FormGroup({
-      displayName: this.displayNameControl,
-      email: this.emailControl,
-      password: this.passwordControl,
-      confirmPassword: this.confirmPasswordControl,
+    this.registerForm = this.formBuilder.group({
+      displayName: [null, [Validators.required]],
+      email: [
+        null,
+        [
+          Validators.required,
+          Validators.pattern('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$'),
+        ],
+        [this.validateEmailNotTaken()],
+      ],
+      password: [null, [Validators.required]],
+      confirmPassword: [null, [Validators.required]],
     });
   }
 

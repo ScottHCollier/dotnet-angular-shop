@@ -2,54 +2,15 @@
   <div *ngIf="(basket$ | async) === null">
     <p>There are no items in your basket</p>
   </div>
-  <div *ngIf="basket$ | async as basket">
-    <div class="row product-headers">
-      <div class="col-lg-12">
-        <div class="col-lg-4">Product</div>
-        <div class="col-lg-2">Price</div>
-        <div class="col-lg-2">Quantity</div>
-        <div class="col-lg-2">Total</div>
-        <div class="col-lg-2">Remove</div>
-      </div>
-    </div>
-    <div *ngFor="let item of basket.items" class="row products">
-      <div class="col-lg-4 product-details">
-        <div class="col-lg-3">
-          <img src="{{ item.pictureUrl }}" alt="{{ item.productName }}" />
-        </div>
-        <div class="col-lg-8">
-          <a href="/shop/{{ item.id }}">{{ item.productName }}</a>
-          <p>Type: {{ item.productType }}</p>
-        </div>
-      </div>
-      <div class="col-lg-2">{{ item.price | currency: "GBP" }}</div>
-      <div class="col-lg-2">
-        <mat-icon (click)="decrementItemQuantity(item)"
-          >remove_circle_outline</mat-icon
-        >
-        <span>{{ item.quantity }}</span>
-        <mat-icon (click)="incrementItemQuantity(item)"
-          >add_circle_outline</mat-icon
-        >
-      </div>
-      <div class="col-lg-2">
-        {{ item.price * item.quantity | currency: "GBP" }}
-      </div>
-      <div class="col-lg-2">
-        <button
-          mat-flat-button
-          color="primary"
-          (click)="removeBasketItem(item)"
-        >
-          Remove
-        </button>
-      </div>
-    </div>
-    <div class="row totals">
-      <div class="col-lg-6 col-lg-offset-6">
-        <app-order-totals></app-order-totals>
-        <a mat-flat-button color="primary" href="/checkout">Checkout</a>
-      </div>
+  <app-basket-summary
+    (decrement)="decrementItemQuantity($event)"
+    (increment)="incrementItemQuantity($event)"
+    (remove)="removeBasketItem($event)"
+  ></app-basket-summary>
+  <div class="row totals">
+    <div class="col-lg-6 col-lg-offset-6">
+      <app-order-totals></app-order-totals>
+      <a mat-flat-button color="primary" href="/checkout">Checkout</a>
     </div>
   </div>
 </div>

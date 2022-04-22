@@ -1,0 +1,27 @@
+<div [formGroup]="checkoutForm">
+  <div class="row" formGroupName="deliveryForm">
+    <div *ngFor="let deliveryMethod of deliveryMethods">
+      <input
+        type="radio"
+        id="{{ deliveryMethod.id }}"
+        value="{{ deliveryMethod.id }}"
+        formControlName="deliveryMethod"
+        class="delivery-method-input"
+        (click)="setShippingPrice(deliveryMethod)"
+      />
+      <label for="{{ deliveryMethod.id }}" class="delivery-method-label">
+        <strong
+          >{{ deliveryMethod.shortName }} -
+          {{ deliveryMethod.price | currency: "GBP" }}</strong
+        >
+        <br />
+        <span class="labe;-description">{{ deliveryMethod.description }}</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<div>
+  <button cdkStepperPrevious>Back</button>
+  <button cdkStepperNext>Continue</button>
+</div>
