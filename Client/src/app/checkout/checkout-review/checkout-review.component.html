@@ -1,11 +1,9 @@
-<div class="container">
-  <app-basket-summary
-    [isBasket]="false"
-    [items]="(basket$ | async).items"
-  ></app-basket-summary>
-</div>
+<app-basket-summary
+  [isBasket]="false"
+  [items]="(basket$ | async).items"
+></app-basket-summary>
 
 <div>
   <button cdkStepperPrevious>Back</button>
-  <button cdkStepperNext>Continue</button>
+  <button (click)="createPaymentIntent()">Continue</button>
 </div>

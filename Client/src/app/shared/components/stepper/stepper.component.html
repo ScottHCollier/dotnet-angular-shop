@@ -1,12 +1,14 @@
-<div class="container">
-  <ul>
-    <li *ngFor="let step of steps; let i = index">
-      <button [class.active]="selectedIndex === i" (click)="onClick(i)">
-        {{ step.label }}:{{ step.completed }}
-      </button>
-    </li>
-  </ul>
-  <div>
-    <ng-container [ngTemplateOutlet]="selected.content"></ng-container>
-  </div>
+<ul>
+  <li *ngFor="let step of steps; let i = index">
+    <button
+      [class.active]="selectedIndex === i"
+      (click)="onClick(i)"
+      [disabled]="true"
+    >
+      {{ step.label }}
+    </button>
+  </li>
+</ul>
+<div>
+  <ng-container [ngTemplateOutlet]="selected.content"></ng-container>
 </div>

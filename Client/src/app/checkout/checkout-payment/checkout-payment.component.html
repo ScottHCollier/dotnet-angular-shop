@@ -1,6 +1,38 @@
-<p>checkout-payment works!</p>
+<div [formGroup]="checkoutForm">
+  <div class="row">
+    <div class="form-group col-lg-12" formGroupName="paymentForm">
+      <app-text-input
+        [label]="'Name on card'"
+        formControlName="nameOnCard"
+      ></app-text-input>
+    </div>
+    <div class="form-group col-lg-6">
+      <div #cardNumber></div>
+      <ng-container *ngIf="cardErrors">
+        <span>{{ cardErrors }}</span>
+      </ng-container>
+    </div>
+    <div class="form-group col-lg-3">
+      <div #cardExpiry></div>
+    </div>
+    <div class="form-group col-lg-3">
+      <div #cardCvc></div>
+    </div>
+  </div>
+</div>
 
 <div>
   <button cdkStepperPrevious>Back</button>
-  <button (click)="submitOrder()">Submit Order</button>
+  <button
+    [disabled]="
+      loading ||
+      checkoutForm.get('paymentForm').invalid ||
+      !cardNumberValid ||
+      !cardExpiryValid ||
+      !cardCvcValid
+    "
+    (click)="submitOrder()"
+  >
+    Submit Order <span *ngIf="loading">LOADING</span>
+  </button>
 </div>
