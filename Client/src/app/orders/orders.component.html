@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="row order-headers">
+      <div class="col-lg-12">
+        <div class="col-lg-4">Order</div>
+        <div class="col-lg-2">Date</div>
+        <div class="col-lg-2">Total</div>
+        <div class="col-lg-2">Status</div>
+      </div>
+    </div>
+    <div
+      *ngFor="let order of orders"
+      class="row orders"
+      routerLink="/orders/{{ order.id }}"
+    >
+      <div class="col-lg-4">#{{ order.id }}</div>
+      <div class="col-lg-2">{{ order.orderDate }}</div>
+      <div class="col-lg-2">
+        {{ order.total | currency: "GBP" }}
+      </div>
+      <div class="col-lg-2">
+        {{ order.status }}
+      </div>
+    </div>
+  </div>
+</div>
