@@ -2,19 +2,18 @@
   <div class="row">
     <div class="col-lg-2">
       <ng-container *ngIf="productTypes && productBrands">
-        <mat-form-field appearance="fill" class="sort-options">
-          <mat-label>Sort</mat-label>
-          <mat-select
-            name="sortOptions"
-            id="sortOptions"
-            [(value)]="shopParams.sort"
-            (valueChange)="onSortSelected()"
+        <select
+          class="sort-options"
+          (change)="onSortSelected($event.target.value)"
+        >
+          <option
+            *ngFor="let sort of sortOptions"
+            [selected]="shopParams.sort === sort.value"
+            [value]="sort.value"
           >
-            <mat-option *ngFor="let sort of sortOptions" [value]="sort.value">
-              {{ sort.name }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+            {{ sort.name }}
+          </option>
+        </select>
 
         <ul class="facet-category">
           <li class="facet facet-header">Brands</li>
@@ -49,28 +48,25 @@
           [pageSize]="this.shopParams.pageSize"
           [pageNumber]="this.shopParams.pageNumber"
         ></app-pagination-header>
-        <div *ngIf="productTypes && productBrands">
-          <mat-form-field>
+        <div class="search-actions" *ngIf="productTypes && productBrands">
+          <div class="search">
             <input
               (keyup.enter)="onSearch()"
               type="text"
-              matInput
               placeholder="Search"
               #search
             />
-            <button matSuffix mat-button (click)="onSearch()">
+            <button (click)="onSearch()">
               <mat-icon>search</mat-icon>
             </button>
-          </mat-form-field>
+          </div>
 
-          <button mat-flat-button color="primary" (click)="onReset()">
-            Reset
-          </button>
+          <button class="primary-button" (click)="onReset()">Reset</button>
         </div>
       </div>
 
       <div class="row product-list">
-        <div class="col-lg-3" *ngFor="let product of products">
+        <div class="col-lg-4" *ngFor="let product of products">
           <app-product-item [product]="product"></app-product-item>
         </div>
       </div>

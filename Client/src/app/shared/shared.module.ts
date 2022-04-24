@@ -19,6 +19,8 @@ import { TextInputComponent } from './components/text-input/text-input.component
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { StepperComponent } from './components/stepper/stepper.component';
 import { BasketSummaryComponent } from './components/basket-summary/basket-summary.component';
+import { TextSliderComponent } from './components/text-slider/text-slider.component';
+import { FormInputComponent } from './components/form-input/form-input.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { BasketSummaryComponent } from './components/basket-summary/basket-summa
     TextInputComponent,
     StepperComponent,
     BasketSummaryComponent,
+    TextSliderComponent,
+    FormInputComponent,
   ],
   imports: [
     CommonModule,
@@ -64,6 +68,8 @@ import { BasketSummaryComponent } from './components/basket-summary/basket-summa
     OrderTotalsComponent,
     ReactiveFormsModule,
     TextInputComponent,
+    TextSliderComponent,
+    FormInputComponent,
   ],
 })
 export class SharedModule {}

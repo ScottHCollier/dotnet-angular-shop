@@ -1,11 +1,21 @@
-.breadcrumb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.section-header {
+  margin-top: 20px;
+  margin-bottom: 20px;
 
-  .breadcrumb-item {
-    &:not(:first-of-type) {
-      margin-left: 5px;
+  .breadcrumb-container {
+    display: flex;
+    justify-content: flex-end;
+
+    .breadcrumb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .breadcrumb-item {
+        &:not(:first-of-type) {
+          margin-left: 5px;
+        }
+      }
     }
   }
 }

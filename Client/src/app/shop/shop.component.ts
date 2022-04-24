@@ -17,6 +17,7 @@ export class ShopComponent implements OnInit {
   productBrands: IProductBrand[];
   productTypes: IProductType[];
   totalCount: number;
+  sortSelected: string = 'name';
   sortOptions = [
     { name: 'Alphabetical', value: 'name' },
     { name: 'Price: Low to High', value: 'priceAsc' },
@@ -80,7 +81,8 @@ export class ShopComponent implements OnInit {
     this.getProducts();
   }
 
-  onSortSelected() {
+  onSortSelected(sort: string) {
+    this.shopParams.sort = sort;
     this.getProducts();
   }
 

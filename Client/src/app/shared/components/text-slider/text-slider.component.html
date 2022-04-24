@@ -1,0 +1,16 @@
+<div class="slider-container">
+  <div class="nav-slider" *ngFor="let slide of slides; let i = index">
+    <div
+      class="slide"
+      [class.one]="i === 0"
+      [class.two]="i === 1"
+      [class.three]="i === 2"
+      [class.hidden]="i !== 0 && i !== 1 && i !== 2"
+    >
+      <p class="message">{{ slide.message }}</p>
+      <a class="link" *ngIf="slide.hrefText" href="{{ slide.hrefLink }}">{{
+        slide.hrefText
+      }}</a>
+    </div>
+  </div>
+</div>

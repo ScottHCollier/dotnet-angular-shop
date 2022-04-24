@@ -1,62 +1,192 @@
-.sidenav-container {
-  height: 100%;
-}
+@import "variables";
 
-.sidenav {
-  width: 200px;
-}
-
-.sidenav .mat-toolbar {
-  background: inherit;
-}
-
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-.container {
+.top-bar {
+  height: 36px;
+  width: 100%;
+  background-color: $light-grey;
   display: flex;
   align-items: center;
 
-  .nav-left,
-  .nav-right {
-    width: 300px;
-    display: flex;
-    align-items: center;
-  }
+  .container {
+    .top-bar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
 
-  .nav-left {
-    justify-content: flex-start;
+      .top-bar-left {
+        #github-logo {
+          &:hover {
+            cursor: pointer;
+            fill: $black-hover;
+          }
+        }
+      }
 
-    .logo {
-      width: 25px;
-      height: auto;
+      .top-bar-right {
+        a {
+          margin-left: 10px;
+          padding-left: 10px;
+          position: relative;
 
-      &:hover {
-        cursor: pointer;
+          &:hover {
+            color: $black-hover;
+          }
+
+          &:not(:first-of-type) {
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 100%;
+              width: 1px;
+              background-color: $light-grey-border;
+            }
+          }
+        }
       }
     }
   }
+}
 
-  .nav-right {
-    justify-content: flex-end;
+.nav-bar {
+  height: 60px;
+  display: flex;
+  align-items: center;
 
-    .basket-icon {
-      &:hover {
-        cursor: pointer;
+  .container {
+    height: 100%;
+
+    .nav-bar-content {
+      display: flex;
+      height: 100%;
+
+      .nav-left,
+      .nav-right {
+        width: 300px;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-left {
+        justify-content: flex-start;
+
+        .logo {
+          width: 25px;
+          height: auto;
+
+          &:hover {
+            cursor: pointer;
+            fill: $black-hover;
+          }
+        }
+      }
+
+      .nav-right {
+        justify-content: flex-end;
+        position: relative;
+
+        .account-menu-button {
+          &:hover {
+            cursor: pointer;
+            color: $black-hover;
+          }
+        }
+
+        .account-dropdown {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          bottom: -160px;
+          background-color: $white;
+          padding: 10px;
+          z-index: 1;
+          animation: fadeDown 200ms;
+
+          a {
+            padding: 10px;
+
+            &:hover {
+              cursor: pointer;
+              color: $black-hover;
+            }
+
+            &:not(:last-of-type) {
+              border-bottom: 1px solid $white-border;
+            }
+          }
+
+          .welcome {
+            padding: 10px;
+            border-bottom: 1px solid $white-border;
+          }
+        }
+
+        .basket-icon-container {
+          position: relative;
+
+          .basket-icon {
+            &:hover {
+              cursor: pointer;
+              color: $black-hover;
+            }
+          }
+
+          .basket-count {
+            position: absolute;
+            background-color: $light-grey;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -10px;
+            right: -10px;
+            opacity: 0.9;
+          }
+        }
+      }
+
+      .nav-centre {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+
+        a {
+          position: relative;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          padding: 0 10px;
+          font-size: 16px;
+
+          &:hover {
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 2px;
+              width: 100%;
+              background-color: $black;
+            }
+          }
+        }
       }
     }
   }
+}
 
-  .nav-centre {
-    margin: 0 auto;
-
-    a {
-      &.active {
-        color: violet;
-      }
-    }
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

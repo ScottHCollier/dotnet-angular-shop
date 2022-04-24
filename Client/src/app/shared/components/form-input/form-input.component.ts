@@ -9,11 +9,11 @@ import {
 import { ControlValueAccessor, NgControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-text-input',
-  templateUrl: './text-input.component.html',
-  styleUrls: ['./text-input.component.scss'],
+  selector: 'app-form-input',
+  templateUrl: './form-input.component.html',
+  styleUrls: ['./form-input.component.scss'],
 })
-export class TextInputComponent implements OnInit, ControlValueAccessor {
+export class FormInputComponent implements OnInit, ControlValueAccessor {
   @ViewChild('input', { static: true }) input: ElementRef;
   @ViewChild('labelInput', { static: true }) inputLabel: ElementRef;
   @Input() type: string = 'text';

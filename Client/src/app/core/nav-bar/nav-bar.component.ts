@@ -22,6 +22,7 @@ export class NavBarComponent implements OnInit {
 
   basketCount$: Observable<IBasketCount>;
   currentUser$: Observable<IUser>;
+  showMenu: boolean = false;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -36,5 +37,10 @@ export class NavBarComponent implements OnInit {
 
   logout() {
     this.accountService.logout();
+  }
+
+  triggerMenu() {
+    this.showMenu = !this.showMenu;
+    console.log(this.showMenu);
   }
 }

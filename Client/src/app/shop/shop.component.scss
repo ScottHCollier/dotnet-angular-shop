@@ -1,8 +1,65 @@
-$primary: #3f51b5;
+@import "variables";
 
 .sort-options {
   display: block;
   width: 100%;
+  padding: 10px 5px;
+  border-radius: 0;
+  border-color: $light-grey-border;
+  outline: none;
+}
+
+.facet-sorting {
+  .search-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+
+    .search {
+      position: relative;
+      width: 100%;
+
+      input {
+        padding: 10px 5px;
+        border-radius: 0;
+        border-color: $light-grey-border;
+        width: calc(100% - 40px);
+        border: 1px solid $light-grey-border;
+        border-right: 0;
+        outline: none;
+      }
+
+      button {
+        position: absolute;
+        height: 37px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: 0;
+        border-radius: 0;
+        border: 1px solid $light-grey-border;
+        background-color: $light-grey-border;
+        margin-right: 5px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .primary-button {
+      width: 30px;
+      min-width: 0;
+      height: 37px;
+      line-height: initial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 .product-listing-page {
@@ -17,19 +74,13 @@ $primary: #3f51b5;
 
 .facet-category {
   margin: 10px 0;
-  border: 1px solid lightgray;
-  border-radius: 5px;
+  border: 1px solid $light-grey;
 
   .facet {
     padding: 10px;
 
     &:not(:last-of-type) {
-      border-bottom: 1px solid lightgray;
-    }
-
-    &:last-of-type {
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-bottom: 1px solid $light-grey;
     }
 
     &:hover {
@@ -37,14 +88,12 @@ $primary: #3f51b5;
     }
 
     &.active {
-      background-color: #b3bbe7;
+      background-color: $light-grey;
     }
 
     &.facet-header {
-      background-color: $primary;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      color: white;
+      background-color: $light-grey-border;
+      color: $black;
     }
   }
 }

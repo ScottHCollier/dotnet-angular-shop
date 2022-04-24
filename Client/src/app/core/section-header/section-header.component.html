@@ -1,6 +1,6 @@
 <ng-container *ngIf="breadcrumb$ | async as breadcrumbs">
   <div
-    class="container"
+    class="container section-header"
     *ngIf="
       breadcrumbs.length > 0 &&
       breadcrumbs[breadcrumbs.length - 1].label !== 'Home'
@@ -15,7 +15,7 @@
           }}
         </h1>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-3 breadcrumb-container">
         <xng-breadcrumb></xng-breadcrumb>
       </div>
     </div>
