@@ -23,6 +23,7 @@ export class NavBarComponent implements OnInit {
   basketCount$: Observable<IBasketCount>;
   currentUser$: Observable<IUser>;
   showMenu: boolean = false;
+  hoverScroll: boolean = false;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -39,8 +40,17 @@ export class NavBarComponent implements OnInit {
     this.accountService.logout();
   }
 
-  triggerMenu() {
+  openMenu() {
     this.showMenu = !this.showMenu;
-    console.log(this.showMenu);
+  }
+
+  closeMenu() {
+    if (this.hoverScroll === true) {
+      this.showMenu = false;
+    }
+  }
+
+  hoverScrollTest() {
+    console.log('Hover');
   }
 }

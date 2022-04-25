@@ -1,23 +1,56 @@
 <div class="container">
   <div class="row" *ngIf="product">
-    <div class="col-lg-6">
-      <img src="{{ product.pictureUrl }}" alt="{{ product.name }}" class="" />
-    </div>
-    <div class="col-lg-6">
-      <h3>{{ product.name }}</h3>
-      <p>{{ product.price | currency }}</p>
-      <div class="product-actions">
-        <mat-icon (click)="decrementQuantity()">remove_circle_outline</mat-icon>
-        <span>{{ quantity }}</span>
-        <mat-icon (click)="incrementQuantity()">add_circle_outline</mat-icon>
-        <button mat-flat-button color="primary" (click)="addItemToBasket()">
-          Add to cart
-        </button>
+    <div class="col-lg-8 no-padding image-column">
+      <div class="col-lg-6 images">
+        <img
+          src="{{ product.pictureUrl }}"
+          alt="{{ product.name }}"
+          class="product-image"
+        />
+      </div>
+      <div class="col-lg-6 no-padding images">
+        <img
+          src="{{ product.pictureUrl }}"
+          alt="{{ product.name }}"
+          class="product-image-small"
+        />
+        <img
+          src="{{ product.pictureUrl }}"
+          alt="{{ product.name }}"
+          class="product-image-small"
+        />
+        <img
+          src="{{ product.pictureUrl }}"
+          alt="{{ product.name }}"
+          class="product-image-small"
+        />
+        <img
+          src="{{ product.pictureUrl }}"
+          alt="{{ product.name }}"
+          class="product-image-small"
+        />
       </div>
     </div>
-    <div class="col-lg-12">
-      <h4>Description</h4>
-      <p>{{ product.description }}</p>
+    <div class="col-lg-4 details-column">
+      <h1 class="product-title">{{ product.name }}</h1>
+      <p class="product-price">{{ product.price | currency: "GBP" }}</p>
+      <h4 class="product-description-title">Description</h4>
+      <p class="product-description">{{ product.description }}</p>
+      <div class="product-actions">
+        <div class="add-to-basket">
+          <mat-icon class="icon" (click)="decrementQuantity()"
+            >remove_circle_outline</mat-icon
+          >
+          <span>{{ quantity }}</span>
+          <mat-icon class="icon" (click)="incrementQuantity()"
+            >add_circle_outline</mat-icon
+          >
+        </div>
+
+        <button class="primary-button" (click)="addItemToBasket()">
+          <mat-icon>add_shopping_cart</mat-icon>
+        </button>
+      </div>
     </div>
   </div>
 </div>

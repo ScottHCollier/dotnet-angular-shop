@@ -1,0 +1,16 @@
+.checkout-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+
+  h4 {
+    font-size: 18px;
+  }
+}

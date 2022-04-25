@@ -34,6 +34,7 @@
         [shippingPrice]="(basketTotals$ | async).shipping"
         [subtotal]="(basketTotals$ | async).subtotal"
         [total]="(basketTotals$ | async).total"
+        [isBasket]="true"
       ></app-order-totals>
     </div>
   </div>

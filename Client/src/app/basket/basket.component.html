@@ -1,24 +1,26 @@
 <div class="container basket">
-  <div *ngIf="(basket$ | async) === null">
-    <p>There are no items in your basket</p>
-  </div>
-  <div *ngIf="(basket$ | async) !== null">
-    <app-basket-summary
-      (decrement)="decrementItemQuantity($event)"
-      (increment)="incrementItemQuantity($event)"
-      (remove)="removeBasketItem($event)"
-      [items]="(basket$ | async).items"
-    ></app-basket-summary>
-  </div>
-  <div class="row totals">
-    <div class="col-lg-6 col-lg-offset-6">
-      <app-order-totals
-        *ngIf="basketTotals$ | async"
-        [shippingPrice]="(basketTotals$ | async).shipping"
-        [subtotal]="(basketTotals$ | async).subtotal"
-        [total]="(basketTotals$ | async).total"
-      ></app-order-totals>
-      <a mat-flat-button color="primary" href="/checkout">Checkout</a>
+  <div class="col-lg-12">
+    <div *ngIf="(basket$ | async) === null">
+      <p>There are no items in your basket</p>
+    </div>
+    <div *ngIf="(basket$ | async) !== null">
+      <app-basket-summary
+        (decrement)="decrementItemQuantity($event)"
+        (increment)="incrementItemQuantity($event)"
+        (remove)="removeBasketItem($event)"
+        [items]="(basket$ | async).items"
+      ></app-basket-summary>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-6 totals">
+        <app-order-totals
+          *ngIf="basketTotals$ | async"
+          [shippingPrice]="(basketTotals$ | async).shipping"
+          [subtotal]="(basketTotals$ | async).subtotal"
+          [total]="(basketTotals$ | async).total"
+        ></app-order-totals>
+        <a class="primary-button" href="/checkout">Checkout</a>
+      </div>
     </div>
   </div>
 </div>

@@ -58,11 +58,16 @@
       </div>
       <div class="nav-right">
         <ng-container *ngIf="currentUser$ | async as user">
-          <mat-icon class="account-menu-button" (click)="triggerMenu()"
+          <mat-icon class="account-menu-button" (click)="openMenu()"
             >more_vert</mat-icon
           >
 
-          <div *ngIf="showMenu" class="account-dropdown">
+          <div
+            *ngIf="showMenu"
+            class="account-dropdown"
+            (mouseenter)="hoverScroll = true"
+            (mouseleave)="closeMenu()"
+          >
             <span class="welcome">Welcome, {{ user.displayName }}</span>
 
             <a routerLink="/basket">
@@ -96,6 +101,3 @@
 </div>
 
 <app-text-slider></app-text-slider>
-
-<!-- Add Content Here -->
-<ng-content></ng-content>

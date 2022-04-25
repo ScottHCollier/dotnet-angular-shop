@@ -1,0 +1,26 @@
+@import "variables";
+
+.order-headers {
+  padding: 20px 0;
+  border-top: 1px solid $light-grey-border;
+  border-bottom: 1px solid $light-grey-border;
+  font-weight: bold;
+
+  .total-checkout {
+    text-align: right;
+  }
+}
+
+.order {
+  padding: 20px 0;
+  border-bottom: 1px solid $light-grey-border;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $light-grey;
+  }
+}
+
+.status {
+  text-align: right;
+}

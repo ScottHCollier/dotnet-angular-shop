@@ -1,0 +1,38 @@
+.order-totals {
+  margin-top: 20px;
+
+  &.basket {
+    margin-top: 0;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    li {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .total-label {
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .total,
+      .total-cost {
+        font-weight: bold;
+      }
+
+      .total-cost {
+        font-size: 16px;
+      }
+    }
+  }
+}

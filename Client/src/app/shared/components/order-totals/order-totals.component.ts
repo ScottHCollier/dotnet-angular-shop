@@ -13,6 +13,7 @@ export class OrderTotalsComponent implements OnInit {
   @Input() shippingPrice: number;
   @Input() subtotal: number;
   @Input() total: number;
+  @Input() isBasket: boolean = false;
 
   constructor(private basketService: BasketService) {}
 

@@ -1,19 +1,21 @@
-<div class="product">
-  <img
-    class="product-image"
-    src="{{ product.pictureUrl }}"
-    alt="{{ product.name }}"
-  />
-  <div class="product-header">
+<div class="product-container">
+  <span class="label"></span>
+  <div class="product">
+    <img
+      class="product-image"
+      src="{{ product.pictureUrl }}"
+      alt="{{ product.name }}"
+    />
     <a class="product-title" routerLink="/shop/{{ product.id }}">{{
       product.name
     }}</a>
-    <span class="product-subtitle">{{ product.price | currency: "GBP" }}</span>
-  </div>
-  <div class="product-actions">
-    <button class="primary-button" routerLink="/shop/{{ product.id }}">
-      VIEW
-    </button>
-    <button class="primary-button" (click)="addItemToBasket()">ADD</button>
+    <span class="product-price">{{ product.price | currency: "GBP" }}</span>
+
+    <div class="product-actions">
+      <button class="primary-button" routerLink="/shop/{{ product.id }}">
+        VIEW
+      </button>
+      <button class="primary-button" (click)="addItemToBasket()">ADD</button>
+    </div>
   </div>
 </div>

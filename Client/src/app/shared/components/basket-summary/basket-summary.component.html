@@ -1,38 +1,68 @@
 <div *ngIf="items.length > 0">
   <div class="row product-headers">
-    <div class="col-lg-12">
-      <div class="col-lg-4">Product</div>
+    <div class="col-lg-12 no-padding">
+      <div
+        [class.col-lg-4]="isBasket"
+        [class.col-lg-6]="!isBasket"
+        class="left-no-padding"
+      >
+        Product
+      </div>
       <div class="col-lg-2">Price</div>
-      <div class="col-lg-2">Quantity</div>
-      <div class="col-lg-2">Total</div>
-      <div class="col-lg-2" *ngIf="isBasket">Remove</div>
+      <div class="col-lg-3">Quantity</div>
+      <div
+        [class.right-no-padding]="!isBasket"
+        [class.total-checkout]="!isBasket"
+        class="col-lg-1"
+      >
+        Total
+      </div>
+      <div class="col-lg-2 right-no-padding" *ngIf="isBasket">Remove</div>
     </div>
   </div>
   <div *ngFor="let item of items" class="row products">
-    <div class="col-lg-4 product-details">
-      <div class="col-lg-3">
+    <div
+      [class.col-lg-4]="isBasket"
+      [class.col-lg-6]="!isBasket"
+      class="product-details left-no-padding"
+    >
+      <div class="col-lg-3 left-no-padding">
         <img src="{{ item.pictureUrl }}" alt="{{ item.productName }}" />
       </div>
-      <div class="col-lg-8">
-        <a href="/shop/{{ item.id || item.id }}">{{ item.productName }}</a>
+      <div class="col-lg-8 details">
+        <a class="product-name" href="/shop/{{ item.id || item.productId }}">{{
+          item.productName
+        }}</a>
         <p *ngIf="item.productType">Type: {{ item.productType }}</p>
       </div>
     </div>
     <div class="col-lg-2">{{ item.price | currency: "GBP" }}</div>
-    <div class="col-lg-2">
-      <mat-icon *ngIf="isBasket" (click)="decrementItemQuantity(item)"
-        >remove_circle_outline</mat-icon
-      >
-      <span>{{ item.quantity }}</span>
-      <mat-icon *ngIf="isBasket" (click)="incrementItemQuantity(item)"
-        >add_circle_outline</mat-icon
-      >
+    <div class="col-lg-3">
+      <div class="add-to-basket">
+        <mat-icon
+          class="icon"
+          *ngIf="isBasket"
+          (click)="decrementItemQuantity(item)"
+          >remove_circle_outline</mat-icon
+        >
+        <span [class.basket]="isBasket">{{ item.quantity }}</span>
+        <mat-icon
+          class="icon"
+          *ngIf="isBasket"
+          (click)="incrementItemQuantity(item)"
+          >add_circle_outline</mat-icon
+        >
+      </div>
     </div>
-    <div class="col-lg-2">
+    <div
+      [class.right-no-padding]="!isBasket"
+      [class.total-checkout]="!isBasket"
+      class="col-lg-1"
+    >
       {{ item.price * item.quantity | currency: "GBP" }}
     </div>
-    <div class="col-lg-2" *ngIf="isBasket">
-      <button mat-flat-button color="primary" (click)="removeBasketItem(item)">
+    <div class="col-lg-2 right-no-padding" *ngIf="isBasket">
+      <button class="primary-button" (click)="removeBasketItem(item)">
         Remove
       </button>
     </div>

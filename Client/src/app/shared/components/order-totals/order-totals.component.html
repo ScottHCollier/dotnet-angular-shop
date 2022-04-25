@@ -1,7 +1,24 @@
-<div class="basket-totals">Order Summary</div>
-<p>Shipping costs will be added depending on choices made during checkout</p>
-<ul>
-  <li>Subtotal: {{ subtotal | currency: "GBP" }}</li>
-  <li>Shipping and handling: {{ shippingPrice | currency: "GBP" }}</li>
-  <li>Total: {{ total | currency: "GBP" }}</li>
-</ul>
+<div class="order-totals" [class.basket]="isBasket">
+  <h2>Order Summary</h2>
+  <p>Shipping costs will be added depending on choices made during checkout</p>
+  <ul>
+    <li>
+      <span>Subtotal:</span>
+      <span class="total">
+        {{ subtotal | currency: "GBP" }}
+      </span>
+    </li>
+    <li>
+      <span>Shipping and handling:</span>
+      <span class="total">
+        {{ shippingPrice | currency: "GBP" }}
+      </span>
+    </li>
+    <li>
+      <span class="total-label">Total:</span>
+      <span class="total-cost">
+        {{ total | currency: "GBP" }}
+      </span>
+    </li>
+  </ul>
+</div>

@@ -21,9 +21,10 @@
   </div>
 </div>
 
-<div>
-  <button cdkStepperPrevious>Back</button>
+<div class="checkout-actions">
+  <button class="primary-button" cdkStepperPrevious>Back</button>
   <button
+    class="primary-button"
     [disabled]="
       loading ||
       checkoutForm.get('paymentForm').invalid ||

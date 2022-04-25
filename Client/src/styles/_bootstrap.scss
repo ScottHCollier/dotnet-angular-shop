@@ -108,6 +108,19 @@
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+
+  &.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.left-no-padding {
+    padding-left: 0;
+  }
+
+  &.right-no-padding {
+    padding-right: 0;
+  }
 }
 .col-xs-1,
 .col-xs-2,

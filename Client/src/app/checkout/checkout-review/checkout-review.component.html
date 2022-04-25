@@ -1,9 +1,14 @@
-<app-basket-summary
-  [isBasket]="false"
-  [items]="(basket$ | async).items"
-></app-basket-summary>
-
-<div>
-  <button cdkStepperPrevious>Back</button>
-  <button (click)="createPaymentIntent()">Continue</button>
+<div class="col-lg-12">
+  <app-basket-summary
+    [isBasket]="false"
+    [items]="(basket$ | async).items"
+  ></app-basket-summary>
+</div>
+<div class="col-lg-12 no-padding">
+  <div class="checkout-actions">
+    <button class="primary-button" cdkStepperPrevious>Back</button>
+    <button class="primary-button" (click)="createPaymentIntent()">
+      Continue
+    </button>
+  </div>
 </div>

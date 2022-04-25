@@ -1,146 +1,202 @@
 [
     {
-        "Name": "Angular Speedster Board 2000",
+        "Name": "Wicker Trilby",
         "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-        "Price": 200,
-        "PictureUrl": "images/products/sb-ang1.png",
+        "Price": 20.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1595642527925-4d41cb781653?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         "ProductTypeId": 1,
         "ProductBrandId": 1
     },
     {
-        "Name": "Green Angular Board 3000",
+        "Name": "Floppy Red",
         "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
-        "Price": 150,
-        "PictureUrl": "images/products/sb-ang2.png",
-        "ProductTypeId": 1,
-        "ProductBrandId": 1
-    },
-    {
-        "Name": "Core Board Speed Rush 3",
-        "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-        "Price": 180,
-        "PictureUrl": "images/products/sb-core1.png",
-        "ProductTypeId": 1,
-        "ProductBrandId": 2
-    },
-    {
-        "Name": "Net Core Super Board",
-        "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-        "Price": 300,
-        "PictureUrl": "images/products/sb-core2.png",
-        "ProductTypeId": 1,
-        "ProductBrandId": 2
-    },
-    {
-        "Name": "React Board Super Whizzy Fast",
-        "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-        "Price": 250,
-        "PictureUrl": "images/products/sb-react1.png",
+        "Price": 35.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1593476087123-36d1de271f08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1826&q=80",
         "ProductTypeId": 1,
         "ProductBrandId": 4
     },
     {
-        "Name": "Typescript Entry Board",
-        "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
-        "Price": 120,
-        "PictureUrl": "images/products/sb-ts1.png",
+        "Name": "Authentic Cowboy",
+        "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+        "Price": 40.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1617340052388-dbaffc14720d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         "ProductTypeId": 1,
+        "ProductBrandId": 2
+    },
+    {
+        "Name": "Caribbean Cap",
+        "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+        "Price": 25.49,
+        "PictureUrl": "https://images.unsplash.com/photo-1534215754734-18e55d13e346?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=704&q=80",
+        "ProductTypeId": 1,
+        "ProductBrandId": 2
+    },
+    {
+        "Name": "Green Bean",
+        "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+        "Price": 21.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1510598969022-c4c6c5d05769?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "ProductTypeId": 1,
+        "ProductBrandId": 4
+    },
+    {
+        "Name": "Eff Dogs",
+        "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+        "Price": 14.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1626543772115-ebd0bb39c6e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "ProductTypeId": 2,
         "ProductBrandId": 5
     },
     {
-        "Name": "Core Blue Hat",
+        "Name": "Infuse Tee",
         "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-        "Price": 10,
-        "PictureUrl": "images/products/hat-core1.png",
+        "Price": 10.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1456885284447-7dd4bb8720bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         "ProductTypeId": 2,
         "ProductBrandId": 2
     },
     {
-        "Name": "Green React Woolen Hat",
+        "Name": "Choose Checker",
         "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-        "Price": 8,
-        "PictureUrl": "images/products/hat-react1.png",
+        "Price": 18.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1528905895600-30137e04d936?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         "ProductTypeId": 2,
         "ProductBrandId": 4
     },
     {
-        "Name": "Purple React Woolen Hat",
+        "Name": "Mountee",
         "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-        "Price": 15,
-        "PictureUrl": "images/products/hat-react2.png",
+        "Price": 15.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1625125887424-ac3d7b1b96b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         "ProductTypeId": 2,
         "ProductBrandId": 4
     },
     {
-        "Name": "Blue Code Gloves",
+        "Name": "Dream Tee",
         "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
-        "Price": 18,
-        "PictureUrl": "images/products/glove-code1.png",
-        "ProductTypeId": 4,
+        "Price": 18.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1507007952078-91d7c6928e5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80",
+        "ProductTypeId": 2,
         "ProductBrandId": 3
     },
     {
-        "Name": "Green Code Gloves",
+        "Name": "Patch Flag",
         "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-        "Price": 15,
-        "PictureUrl": "images/products/glove-code2.png",
-        "ProductTypeId": 4,
+        "Price": 15.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1593263049629-a6bbe863049f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "ProductTypeId": 3,
         "ProductBrandId": 3
     },
     {
-        "Name": "Purple React Gloves",
+        "Name": "Metallic Bow",
         "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
-        "Price": 16,
-        "PictureUrl": "images/products/glove-react1.png",
-        "ProductTypeId": 4,
+        "Price": 16.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1597844961694-d6b8729699e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "ProductTypeId": 3,
         "ProductBrandId": 4
     },
     {
-        "Name": "Green React Gloves",
+        "Name": "Greyscale Jungle",
         "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-        "Price": 14,
-        "PictureUrl": "images/products/glove-react2.png",
-        "ProductTypeId": 4,
+        "Price": 14.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1639341935914-cb9c22d74f94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "ProductTypeId": 3,
         "ProductBrandId": 4
     },
     {
-        "Name": "Redis Red Boots",
+        "Name": "Short Short Denim",
         "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-        "Price": 250,
-        "PictureUrl": "images/products/boot-redis1.png",
+        "Price": 25.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1541238999119-c3972dcdd28c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
         "ProductTypeId": 3,
         "ProductBrandId": 6
     },
     {
-        "Name": "Core Red Boots",
+        "Name": "Dark Grey Cutoff",
         "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-        "Price": 189.99,
-        "PictureUrl": "images/products/boot-core2.png",
+        "Price": 19.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1520367445093-50dc08a59d9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2127&q=80",
         "ProductTypeId": 3,
         "ProductBrandId": 2
     },
     {
-        "Name": "Core Purple Boots",
+        "Name": "Pastel Pumps",
         "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-        "Price": 199.99,
-        "PictureUrl": "images/products/boot-core1.png",
-        "ProductTypeId": 3,
+        "Price": 109.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "ProductTypeId": 4,
+        "ProductBrandId": 1
+    },
+    {
+        "Name": "All Star Grey",
+        "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+        "Price": 50.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1575159185958-fea93127b24b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "ProductTypeId": 4,
+        "ProductBrandId": 3
+    },
+    {
+        "Name": "Red Vans",
+        "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+        "Price": 54.49,
+        "PictureUrl": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=698&q=80",
+        "ProductTypeId": 4,
+        "ProductBrandId": 6
+    },
+    {
+        "Name": "Adidas White",
+        "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+        "Price": 29.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1600269453060-0aaa283dee6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+        "ProductTypeId": 4,
         "ProductBrandId": 2
     },
     {
-        "Name": "Angular Purple Boots",
-        "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
-        "Price": 150,
-        "PictureUrl": "images/products/boot-ang2.png",
-        "ProductTypeId": 3,
+        "Name": "Purple Jordans",
+        "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+        "Price": 204.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1601902623555-e64835dd7b4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
+        "ProductTypeId": 4,
         "ProductBrandId": 1
     },
     {
-        "Name": "Angular Blue Boots",
+        "Name": "Black and Pointy",
         "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-        "Price": 180,
-        "PictureUrl": "images/products/boot-ang1.png",
-        "ProductTypeId": 3,
-        "ProductBrandId": 1
+        "Price": 180.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1605813808178-d98ed02529bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "ProductTypeId": 5,
+        "ProductBrandId": 6
+    },
+    {
+        "Name": "Purple Haze",
+        "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+        "Price": 80.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1544714042-5c0a53d63ed5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80",
+        "ProductTypeId": 5,
+        "ProductBrandId": 6
+    },
+    {
+        "Name": "Morpheus",
+        "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+        "Price": 69.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1590626448634-7a9f6e56bb39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "ProductTypeId": 5,
+        "ProductBrandId": 3
+    },
+    {
+        "Name": "RDJ",
+        "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+        "Price": 30.0,
+        "PictureUrl": "https://images.unsplash.com/photo-1599423485026-a09cc94eb9c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=639&q=80",
+        "ProductTypeId": 5,
+        "ProductBrandId": 3
+    },
+    {
+        "Name": "Lennon",
+        "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+        "Price": 82.99,
+        "PictureUrl": "https://images.unsplash.com/photo-1560727749-cc261b23794c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "ProductTypeId": 5,
+        "ProductBrandId": 2
     }
 ]

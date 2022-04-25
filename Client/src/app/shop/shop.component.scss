@@ -85,15 +85,16 @@
 
     &:hover {
       cursor: pointer;
-    }
-
-    &.active {
       background-color: $light-grey;
     }
 
-    &.facet-header {
+    &.active {
       background-color: $light-grey-border;
-      color: $black;
+    }
+
+    &.facet-header {
+      background-color: $black;
+      color: $white;
     }
   }
 }
