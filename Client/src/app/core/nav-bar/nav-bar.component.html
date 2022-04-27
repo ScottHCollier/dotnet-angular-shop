@@ -45,7 +45,7 @@
         </svg>
       </div>
       <div class="nav-centre">
-        <ng-container *ngIf="!(isHandset$ | async)">
+        <ng-container>
           <a
             routerLink="/"
             routerLinkActive="active"
@@ -53,8 +53,18 @@
             >Home</a
           >
           <a routerLink="/shop" routerLinkActive="active">Shop</a>
-          <a routerLink="/test-error" routerLinkActive="active">Errors</a>
+          <a routerLink="/artists" routerLinkActive="active">Artists</a>
         </ng-container>
+        <!-- <ng-container *ngIf="!(isHandset$ | async)">
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+          <a routerLink="/shop" routerLinkActive="active">Shop</a>
+          <a routerLink="/artists" routerLinkActive="active">Artists</a>
+        </ng-container> -->
       </div>
       <div class="nav-right">
         <ng-container *ngIf="currentUser$ | async as user">

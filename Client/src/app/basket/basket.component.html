@@ -19,7 +19,9 @@
           [subtotal]="(basketTotals$ | async).subtotal"
           [total]="(basketTotals$ | async).total"
         ></app-order-totals>
-        <a class="primary-button" href="/checkout">Checkout</a>
+        <a *ngIf="basketTotals$ | async" class="primary-button" href="/checkout"
+          >Checkout</a
+        >
       </div>
     </div>
   </div>
