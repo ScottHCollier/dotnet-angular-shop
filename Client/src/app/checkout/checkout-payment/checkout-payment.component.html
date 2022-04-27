@@ -34,6 +34,16 @@
     "
     (click)="submitOrder()"
   >
-    Submit Order <span *ngIf="loading">LOADING</span>
+    Submit
+    <ng-container *ngIf="loading">
+      <mat-spinner class="loading-spinner" diameter="16"></mat-spinner>
+    </ng-container>
   </button>
+</div>
+
+<div class="test">
+  <h2>Card details for authenticated test payment:</h2>
+  <p>Card Number: 4000 0000 0000 3063</p>
+  <p>Expiry Date: 12/31</p>
+  <p>CVC: 123</p>
 </div>

@@ -1,3 +1,31 @@
 {
-    "cSpell.words": ["tofu"]
+    "cSpell.words": ["Npgsql", "tofu"],
+    "deploy.reloaded": {
+        "packages": [
+            {
+                "name": "Version 1.0.0",
+                "description": "Package version 1.0.0",
+
+                "files": ["Publish/**"]
+            }
+        ],
+
+        "targets": [
+            {
+                "type": "sftp",
+                "name": "Linux",
+                "description": "SFTP folder",
+
+                "host": "178.62.37.7",
+                "port": 22,
+                "user": "root",
+                "password": "MOnkeycage27!MO",
+
+                "dir": "/var/tofu",
+                "mappings": {
+                    "Publish/**": "/"
+                }
+            }
+        ]
+    }
 }

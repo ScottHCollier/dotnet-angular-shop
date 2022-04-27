@@ -4,3 +4,5 @@ appsettings.json
 *.db
 *.db*
 *.rdb
+/Publish
+/API/wwwroot

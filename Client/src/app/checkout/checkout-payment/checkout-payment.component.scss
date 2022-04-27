@@ -1,6 +1,29 @@
+@import "variables";
+
 .checkout-actions {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .primary-button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .loading-spinner {
+      stroke: $white;
+      margin-left: 10px;
+    }
+  }
+}
+
+.test {
+  h2 {
+    margin: 20px 0;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
 }
