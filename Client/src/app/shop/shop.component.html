@@ -71,14 +71,39 @@
         </div>
       </div>
 
-      <mat-paginator
-        [length]="this.totalCount"
+      <!--
+      <app-pagination
+        [totalCount]="this.totalCount"
         [pageSizeOptions]="[9, 12, 15]"
         aria-label="Select page"
-        (page)="onPageChanged($event)"
         *ngIf="totalCount && totalCount > 0"
-      >
-      </mat-paginator>
+      ></app-pagination> -->
+
+      <div class="paginator" *ngIf="totalCount && totalCount > 0">
+        <span>Items per page</span>
+        <select class="page-size-options" (change)="onPageChanged($event)">
+          <option
+            *ngFor="let pageSizeOption of [9, 12, 15]"
+            value="{{ pageSizeOption }}"
+          >
+            {{ pageSizeOption }}
+          </option>
+        </select>
+        <mat-icon
+          class="pagination-button"
+          [class.disabled]="shopParams.pageNumber === 1"
+          (click)="previousPage()"
+          >navigate_before</mat-icon
+        >
+        <mat-icon
+          class="pagination-button"
+          [class.disabled]="
+            totalCount / shopParams.pageSize <= shopParams.pageNumber
+          "
+          (click)="nextPage()"
+          >navigate_next</mat-icon
+        >
+      </div>
     </div>
   </div>
 </div>

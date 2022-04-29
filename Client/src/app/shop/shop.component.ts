@@ -12,7 +12,7 @@ import { ShopParams } from '../shared/models/shopParams';
 })
 export class ShopComponent implements OnInit {
   @ViewChild('search', { static: false }) searchTerm: ElementRef;
-  @ViewChild('pageSize') paginator: ElementRef;
+  @ViewChild('pageSize') pagination: ElementRef;
   products: IProduct[];
   productBrands: IProductBrand[];
   productTypes: IProductType[];
@@ -87,12 +87,26 @@ export class ShopComponent implements OnInit {
   }
 
   onPageChanged(event: any) {
-    if (this.shopParams.pageSize !== event.pageSize) {
-      this.shopParams.pageSize = event.pageSize;
+    if (this.shopParams.pageSize !== event.target.value) {
+      this.shopParams.pageSize = event.target.value;
+      this.getProducts();
     }
+  }
 
-    this.shopParams.pageNumber = event.pageIndex + 1;
+  previousPage() {
+    if (this.shopParams.pageNumber > 1) {
+      this.shopParams.pageNumber--;
+    }
+    this.getProducts();
+  }
 
+  nextPage() {
+    if (
+      this.totalCount / this.shopParams.pageSize >=
+      this.shopParams.pageNumber
+    ) {
+      this.shopParams.pageNumber++;
+    }
     this.getProducts();
   }
 

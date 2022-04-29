@@ -11,7 +11,7 @@
     routerLink="/orders/{{ order.id }}"
   >
     <div class="col-lg-4 left-no-padding">#{{ order.id }}</div>
-    <div class="col-lg-4">{{ order.orderDate.split("T")[0] }}</div>
+    <div class="col-lg-4">{{ order.orderDate | date }}</div>
     <div class="col-lg-3">
       {{ order.total | currency: "GBP" }}
     </div>

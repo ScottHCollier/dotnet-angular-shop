@@ -1,0 +1,13 @@
+<div class="paginator" *ngIf="totalCount && totalCount > 0">
+  <span>Items per page</span>
+  <select name="test" id="test" (change)="onPageChanged($event)">
+    <option
+      *ngFor="let pageSizeOption of pageSizeOptions"
+      value="{{ pageSizeOption }}"
+    >
+      {{ pageSizeOption }}
+    </option>
+  </select>
+  <mat-icon>navigate_before</mat-icon>
+  <mat-icon>navigate_next</mat-icon>
+</div>
